@@ -1,0 +1,851 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}html{scroll-behavior:smooth}body{line-height:1}a{text-decoration-skip-ink:auto}a[href^="tel"]{color:inherit;text-decoration:none}button{outline:0}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}q{display:inline;font-style:italic}q:before{content:'"';font-style:normal}q:after{content:'"';font-style:normal}textarea,input[type="text"],input[type="button"],input[type="submit"],input[type="reset"],input[type="search"],input[type="password"]{-webkit-appearance:none;appearance:none;border-radius:0}input[type="search"]{-webkit-appearance:textfield}table{border-collapse:collapse;border-spacing:0}th,td{padding:2px}big{font-size:120%}small,sup,sub{font-size:80%}sup{vertical-align:super}sub{vertical-align:sub}dd{margin-left:20px}kbd,tt{font-family:courier;font-size:12px}ins{text-decoration:underline}del,strike,s{text-decoration:line-through}dt{font-weight:bold}address,cite,var{font-style:italic}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+.sticky{}.bypostauthor{}.wp-caption{}.wp-caption-text{}.gallery-caption{}.alignright{}.alignleft{}.aligncenter{}
+.screen-reader-text{border:0;clip:rect(1px,1px,1px,1px);-webkit-clip-path:inset(50%);clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute!important;width:1px;word-wrap:normal!important;word-break:normal}
+.screen-reader-text:focus{background-color:#f7f7f7;border-radius:3px;box-shadow:0 0 2px 2px rgba(0,0,0,.6);clip:auto!important;-webkit-clip-path:none;clip-path:none;color:#007acc;display:block;font-size:14px;font-size:.875rem;font-weight:700;height:auto;right:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}
+.skip-link{left:-9999rem;top:2.5rem;z-index:999999999;text-decoration:underline}
+.skip-link:focus{display:block;left:6px;top:7px;font-size:14px;font-weight:600;text-decoration:none;line-height:normal;padding:15px 23px 14px;z-index:100000;right:auto}
+.visually-hidden:not(:focus):not(:active), .form-allowed-tags:not(:focus):not(:active){position:absolute !important;height:1px;width:1px;overflow:hidden;clip:rect(1px 1px 1px 1px);clip:rect(1px, 1px, 1px, 1px);white-space:nowrap}
+
+:root {
+    --primary-color: #2c16d2;
+}
+
+body {
+    background-color: var(--primary-color);
+}
+
+footer {
+    position:fixed;
+    bottom:0;
+    height: 250px;
+    width: 100%;
+    z-index:900;
+}
+
+.header {
+    padding-top:50px;
+    max-width: 800px;
+    margin:0 auto;
+    width:100%;
+    position:relative;
+    padding: 80px 30px;
+}
+
+.content-wrap {
+    height: 650px;
+}
+
+.align-left {
+    max-width:600px;
+    position:relative;
+}
+
+.align-right {
+    max-width: 500px; 
+    position: relative; 
+    float: right; 
+    width: 100%; 
+    margin-top: 100px;
+}
+
+.mobileWelcome {
+    display: none;
+}
+
+.desktpHeader {
+    /*background-image: url(./images/Header_Desktop.svg);*/
+    background-repeat: no-repeat;
+    background-position: top left;
+    /* position: absolute; */
+    width: 70%;
+    height: auto !important;
+    z-index: 800;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+
+.item-wrap {
+    width:100%;
+    position:absolute;
+    top:0;
+    height:100%;
+}
+
+.starburst {
+    position: absolute;
+    width: 15%;
+    height: auto;
+    z-index: 799;
+    top: -11%;
+    left: -1%;
+}
+
+.lineStar {
+    position: absolute;
+    top: 4%;
+    left: auto;
+    width: 12%;
+    height: auto;
+    z-index: 799;
+    right: 42%;
+}
+
+.flower {
+    position: absolute;
+    top: -21%;
+    right: 18%;
+    width: 12%;
+    height: auto;
+    z-index: 799;
+}
+
+.roundFlower {
+    position: absolute;
+    top: 59%;
+    left: 29%;
+    width: 10%;
+    z-index: 799;
+}
+
+.newsletter {
+    position: absolute;
+    width: 34%;
+    top: 22%;
+    right: -9%;
+    z-index: 803;
+}
+
+.socials {
+    position: absolute;
+    left: 36%;
+    top: auto;
+    width: 33%;
+    z-index: 803;
+    bottom: -58%;
+}
+
+.mobileSocials {
+    display: none;
+}
+
+.ohWakeOrg {
+    position: absolute;
+    right: 10px;
+    top: 58px;
+    width: 20%;
+    z-index: 900;
+}
+
+.trashBag {
+    display: none;
+}
+
+.cloud {
+    display: none;
+}
+
+.yellowCircle {
+    position: fixed;
+    top: auto;
+    left: 17px;
+    width: 60%;
+    height: 0;
+    z-index: 799;
+    bottom: 322px;
+}
+
+.blueCircle {
+    display: none;
+}
+
+.ocean {
+    position: fixed;
+    left: 0;
+    width: 104%;
+    z-index: 800;
+    margin-left: -4%;
+}
+
+#shark {
+    margin: 0;
+    position: absolute;
+    top: auto;
+    left: 39px;
+    width: 300px;
+    z-index: 801;
+    bottom: 39px;
+}
+
+#shark img {
+    width:100%;
+}
+
+/* VIEWPORTS */
+
+@media screen and (max-width: 600px) {
+    .content-wrap {
+        height: 800px;
+    }
+
+    .mobileWelcome{
+        display: block;
+        background-repeat: no-repeat;
+        position: relative;
+        width: 70%;
+        z-index: 800;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .desktpHeader {
+        width: 70%;
+    }
+    
+    .starburst {
+        width: 20%;
+        top: -9%;
+        left: 7%;
+    }
+    
+    .lineStar {
+        display: none;
+    }
+    
+    .flower {
+        display: none;
+    }
+    
+    .roundFlower {
+        top: 11%;
+        left: 80%;
+        width: 10%;
+    }
+    
+    .newsletter {
+        width: 34%;
+        top: 100%;
+        right: 9%;
+    }
+
+    .socials {
+        display: none;
+    }
+
+    .mobileSocials {
+        display: block;
+        position: absolute;
+        left: 10%;
+        top: auto;
+        width: 18%;
+        z-index: 803;
+        bottom: -35%;
+    }
+
+    .desktpCheckOut {
+        max-width: 500px; 
+        position: absolute; 
+        left: 40px;
+        width: 80%; 
+        margin-top: 110px;
+    }
+    
+    .ohWakeOrg {
+        position: absolute;
+        right: 10px;
+        width: 18%;
+        margin-right: 60px;
+        margin-top: 100px;
+    }
+
+    .trashBag {
+        display: block;
+        position: absolute;
+        left: 30px;
+        top: -100px;
+        width: 45%;
+        z-index: 901;
+    }
+
+    .cloud {
+        display: block;
+        position: relative;
+        background-position: 10px 10px;
+        margin-right: -10px;
+        float: right;
+        width: 40%; 
+        margin-top: -20px;
+        z-index: 901;
+    }
+    
+    .yellowCircle {
+        display: none;
+    }
+
+    .blueCircle {
+        display: block;
+        position: fixed;
+        top: auto;
+        right: 20px;
+        width: 30%;
+        height: 0;
+        z-index: 799;
+        bottom: 230px;
+    }
+    
+    #shark {
+        position: fixed;
+        bottom: 80px;
+        left: 30px;
+        width: 40%;
+    }
+    
+    .ocean {
+        position: fixed;
+        bottom: -5px;
+        left: 0;
+        width: 110%;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .mobileWelcome{
+        display: block;
+        background-repeat: no-repeat;
+        position: relative;
+        width: 70%;
+        z-index: 800;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .desktpHeader {
+        width: 70%;
+    }
+    
+    .starburst {
+        width: 20%;
+        top: -9%;
+        left: 7%;
+    }
+    
+    .lineStar {
+        display: none;
+    }
+    
+    .flower {
+        display: none;
+    }
+    
+    .roundFlower {
+        top: 11%;
+        left: 76%;
+        width: 10%;
+    }
+    
+    .newsletter {
+        width: 34%;
+        top: 100%;
+        right: 9%;
+    }
+
+    .socials {
+        display: none;
+    }
+
+    .mobileSocials {
+        display: block;
+        position: absolute;
+        left: 10%;
+        top: auto;
+        width: 18%;
+        z-index: 803;
+        bottom: -35%;
+    }
+
+    .desktpCheckOut {
+        max-width: 500px; 
+        position: absolute; 
+        left: 40px;
+        width: 80%; 
+        margin-top: 110px;
+    }
+    
+    .ohWakeOrg {
+        position: absolute;
+        right: 10px;
+        width: 18%;
+        margin-right: 60px;
+        margin-top: 100px;
+    }
+
+    .trashBag {
+        display: block;
+        position: absolute;
+        left: 30px;
+        top: -100px;
+        width: 45%;
+        z-index: 901;
+    }
+
+    .cloud {
+        display: block;
+        position: relative;
+        background-position: 10px 10px;
+        margin-right: -10px;
+        float: right;
+        width: 40%; 
+        margin-top: -20px;
+        z-index: 901;
+    }
+    
+    .yellowCircle {
+        display: none;
+    }
+
+    .blueCircle {
+        display: block;
+        position: fixed;
+        top: auto;
+        right: 20px;
+        width: 30%;
+        height: 0;
+        z-index: 799;
+        bottom: 230px;
+    }
+    
+    #shark {
+        position: fixed;
+        bottom: 80px;
+        left: 30px;
+        width: 40%;
+    }
+    
+    .ocean {
+        position: fixed;
+        bottom: -5px;
+        left: 0;
+        width: 110%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .content-wrap {
+        height: 650px;
+    }
+
+    .mobileWelcome{
+        display: block;
+        background-repeat: no-repeat;
+        position: relative;
+        width: 75%;
+        z-index: 800;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .desktpHeader {
+        width: 75%;
+    }
+    
+    .starburst {
+        width: 20%;
+        top: -9%;
+        left: 7%;
+    }
+    
+    .lineStar {
+        display: none;
+    }
+    
+    .flower {
+        display: none;
+    }
+    
+    .roundFlower {
+        top: 11%;
+        left: 80%;
+        width: 10%;
+    }
+    
+    .newsletter {
+        width: 38%;
+        top: 100%;
+        right: 9%;
+    }
+
+    .socials {
+        display: none;
+    }
+
+    .mobileSocials {
+        left: 10%;
+        top: auto;
+        width: 20%;
+        bottom: -37%;
+    }
+
+    .desktpCheckOut {
+        left: 50px;
+        width: 80%; 
+        margin-top: 110px;
+    }
+    
+    .ohWakeOrg {
+        right: 10px;
+        width: 18%;
+        margin-right: 40px;
+        margin-top: 100px;
+    }
+
+    .trashBag {
+        left: 50px;
+        top: -90px;
+        width: 50%;
+        z-index: 901;
+    }
+
+    .cloud {
+        margin-right: -10px;
+        float: right;
+        width: 40%; 
+        margin-top: -30px;
+        z-index: 901;
+    }
+    
+    .yellowCircle {
+        display: none;
+    }
+
+    .blueCircle {
+        right: 20px;
+        width: 30%;
+        bottom: 200px;
+    }
+    
+    #shark {
+        bottom: 70px;
+        left: 30px;
+        width: 50%;
+    }
+    
+    .ocean {
+        width: 120%;
+        bottom: -5px;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .content-wrap {
+        height: 700px;
+    }
+
+    .mobileWelcome{
+        display: block;
+        background-repeat: no-repeat;
+        position: relative;
+        width: 80%;
+        z-index: 800;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .desktpHeader {
+        width: 80%;
+        margin-top: 10px;
+    }
+    
+    .starburst {
+        width: 22%;
+        top: -9%;
+        left: 3%;
+    }
+    
+    .lineStar {
+        display: none;
+    }
+    
+    .flower {
+        display: none;
+    }
+    
+    .roundFlower {
+        top: 11%;
+        left: 80%;
+        width: 12%;
+    }
+    
+    .newsletter {
+        width: 40%;
+        top: 100%;
+        right: 9%;
+    }
+
+    .socials {
+        display: none;
+    }
+
+    .mobileSocials {
+        left: 5%;
+        top: auto;
+        width: 22%;
+        bottom: -37%;
+    }
+
+    .desktpCheckOut {
+        left: 30px;
+        width: 80%; 
+        margin-top: 90px;
+    }
+    
+    .ohWakeOrg {
+        right: 5px;
+        width: 20%;
+        margin-right: 40px;
+        margin-top: 70px;
+    }
+
+    .trashBag {
+        left: 30px;
+        top: -90px;
+        width: 54%;
+        z-index: 901;
+    }
+
+    .cloud {
+        margin-right: -10px;
+        float: right;
+        width: 40%; 
+        margin-top: -30px;
+        z-index: 901;
+    }
+    
+    .yellowCircle {
+        display: none;
+    }
+
+    .blueCircle {
+        right: 20px;
+        width: 40%;
+        bottom: 220px;
+    }
+    
+    #shark {
+        bottom: 80px;
+        left: 20px;
+        width: 55%;
+    }
+    
+    .ocean {
+        width: 140%;
+        bottom: -5px;
+    }
+}
+
+@media screen and (max-width: 375px) {    
+    .mobileWelcome{
+        display: block;
+        background-repeat: no-repeat;
+        position: relative;
+        width: 80%;
+        z-index: 800;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .desktpHeader {
+        width: 80%;
+        margin-top: 5px;
+    }
+    
+    .starburst {
+        width: 22%;
+        top: -9%;
+        left: 3%;
+    }
+    
+    .lineStar {
+        display: none;
+    }
+    
+    .flower {
+        display: none;
+    }
+    
+    .roundFlower {
+        top: 11%;
+        left: 80%;
+        width: 12%;
+    }
+    
+    .newsletter {
+        width: 40%;
+        top: 100%;
+        right: 9%;
+    }
+
+    .socials {
+        display: none;
+    }
+
+    .mobileSocials {
+        left: 5%;
+        top: auto;
+        width: 22%;
+        bottom: -35%;
+    }
+
+    .desktpCheckOut {
+        left: 30px;
+        width: 80%; 
+        margin-top: 60px;
+    }
+    
+    .ohWakeOrg {
+        right: 5px;
+        width: 20%;
+        margin-right: 30px;
+        margin-top: 30px;
+    }
+
+    .trashBag {
+        left: 30px;
+        top: -100px;
+        width: 54%;
+        z-index: 901;
+    }
+
+    .cloud {
+        margin-right: -10px;
+        float: right;
+        width: 38%; 
+        margin-top: -50px;
+        z-index: 901;
+    }
+    
+    .yellowCircle {
+        display: none;
+    }
+
+    .blueCircle {
+        right: 20px;
+        width: 40%;
+        bottom: 190px;
+    }
+    
+    #shark {
+        bottom: 60px;
+        left: 10px;
+        width: 55%;
+    }
+    
+    .ocean {
+        width: 130%;
+        bottom: -5px;
+    }
+}
+
+@media screen and (max-width: 320px) {    
+    .mobileWelcome{
+        display: block;
+        background-repeat: no-repeat;
+        position: relative;
+        width: 80%;
+        z-index: 800;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .desktpHeader {
+        width: 80%;
+        margin-top: 5px;
+    }
+    
+    .starburst {
+        width: 22%;
+        top: -9%;
+        left: 3%;
+    }
+    
+    .lineStar {
+        display: none;
+    }
+    
+    .flower {
+        display: none;
+    }
+    
+    .roundFlower {
+        top: 11%;
+        left: 80%;
+        width: 12%;
+    }
+    
+    .newsletter {
+        width: 40%;
+        top: 100%;
+        right: 9%;
+    }
+
+    .socials {
+        display: none;
+    }
+
+    .mobileSocials {
+        left: 5%;
+        top: auto;
+        width: 22%;
+        bottom: -37%;
+    }
+
+    .desktpCheckOut {
+        left: 30px;
+        width: 80%; 
+        margin-top: 40px;
+    }
+    
+    .ohWakeOrg {
+        right: 5px;
+        top: -10px;
+        width: 20%;
+        margin-right: 10px;
+        margin-top: 80px;
+    }
+
+    .trashBag {
+        left: 30px;
+        top: -90px;
+        width: 54%;
+        z-index: 901;
+    }
+
+    .cloud {
+        margin-right: -10px;
+        float: right;
+        width: 40%; 
+        margin-top: -50px;
+        z-index: 901;
+    }
+    
+    .yellowCircle {
+        display: none;
+    }
+
+    .blueCircle {
+        right: 20px;
+        width: 40%;
+        bottom: 160px;
+    }
+    
+    #shark {
+        bottom: 60px;
+        left: 10px;
+        width: 55%;
+    }
+    
+    .ocean {
+        width: 130%;
+        bottom: -5px;
+    }
+}
